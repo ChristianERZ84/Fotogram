@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Lato', sans-serif;
+    src: url('./fonts/Lato-Regular.ttf');
+}
+
+.d-none {
+    display: none;
+}
+
+body {
+    background-color: rgba(20, 17, 22, 0.93);
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: whitesmoke;
+    margin: 0;
+    padding: 0;
+}
+
+header,
+footer {
+    background-color: rgb(20 17 22);
+    width: 100%;
+    height: 100px;
+}
+
+.content-header,
+.content-footer {
+    height: 100%;
+    max-width: 1440px;
+    margin: auto;
+    /* border: 2px solid red; */
+    padding: 25px 0px 0px 25px;
+}
+
+.logo-header {
+    height: 50px;
+    width: auto;
+}
+
+.logo-footer {
+    height: 50px;
+    width: auto;
+}
+
+main {
+    max-width: 1440px;
+    width: 100%;
+    min-height: calc(100dvh - 200px);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 32px;
+    margin: 24px 0 24px 0;
+    padding: 0 16px 0 16px;
+}
+
+.content {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.single-gallery-img-btn {
+    aspect-ratio: 1;
+    min-height: fit-content;
+    min-width: 104px;
+    max-width: 14%;
+    padding: 0;
+    border: 2px solid whitesmoke;
+    border-radius: 16px;
+}
+
+.single-gallery-img-btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px 6px grey;
+}
+
+.single-gallery-img-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+
+/*  Noch anpassen ---> 1x für pics der Galerie & 1x für einzelnes pic im Dialog  */
+/* section img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+} */
+
+section img {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    height: inherit;
+    object-fit: cover;
+}
+
+/* - - - - - - dialog - - - - - - */
+
+dialog {
+    min-width: 300px;
+    max-width: 1024px;
+    width: 66%;
+    border: 1px solid grey;
+    color: whitesmoke;
+    background-color: rgb(33, 33, 35);
+    border-radius: 16px;
+}
+
+dialog::backdrop {
+    backdrop-filter: blur(3px);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+h2 {
+    display: inline;
+    margin: 0;
+    font-size: 24px;
+}
+
+.dialog-header,
+.dialog-footer {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    /* border: 2px solid white; */
+}
+
+.dialog-main-container {
+    /* border: 2px solid coral; */
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.dialog-big-img {
+    /* border: 2px solid coral; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85%;
+}
+
+.close-btn {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 28px;
+    height: 28px;
+    font-size: 20px;
+    border-radius: 6px;
+    border: none;
+    color: rgb(39, 36, 36);
+}
+
+.close-btn:hover {
+    cursor: pointer;
+}
+
+.nav-btn {
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+    padding: 0px;
+    width: 40px;
+    height: auto;
+    border: none;
+    color: rgb(39, 36, 36);
+}
+
+.nav-btn:hover {
+    cursor: pointer;
+}
+
+.counter {
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+/* button:focus, [role="button"]:focus {
+  outline: 2px solid whitesmoke;
+  box-shadow: 0 0 5px 6px whitesmoke;
+} */
+
+
+
+@media (max-width: 680px) {
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .counter {
+        font-size: 16px;
+    }
+}
+
+
+
+@media (max-width: 400px) {
+
+    h1 {
+        font-size: 24px;
+    }
+}
+
+
+
+
+ /* * {
+            text-decoration: none;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            box-sizing: border-box;
+        } */

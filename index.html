@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotogram</title>
+    <link rel="icon" href="./img/Fotogram_favicon.png" type="image/png">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+
+<body onload="renderGallery()">
+    
+    <header>
+        <div class="content-header" >
+            <img class="logo-header" src="./img/Fotogram_Logo.svg" alt="Fotogram-Logo">
+        </div>
+    </header>
+
+    <main>
+        <h1>My personal fotoalbum</h1>
+        <section id="content" class="content"></section>
+    </main>
+
+    <footer>
+        <div class="content-footer">
+            <img src="./img/footer_logo.svg" alt="Logo der Developer Akademie">
+        </div>
+    </footer>
+
+    <dialog id="myDialog" onclick="closeDialog()" aria-labelledby="dialogTitle" aria-describedby="dialogDescr"> 
+    </dialog>
+
+</body>
+</html>
+
