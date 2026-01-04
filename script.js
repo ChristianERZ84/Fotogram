@@ -45,7 +45,7 @@ function renderDialogTemplate(index) {
     return `<div class='dialog-main-container' onclick='event.stopPropagation()'>
                 <header class='dialog-header'>
                     <h2 id="dialogTitle">${titles[index]}</h2>
-                    <button class='close-btn' onclick="closeDialog()" aria-label="close dialog">X</button>
+                    <button class='close-btn' onclick="closeDialog()" aria-label="close dialog"><img src="./img/close.png"></button>
                 </header>
 
                 <section class='dialog-big-img' id='dialog-single-img'>
@@ -53,9 +53,9 @@ function renderDialogTemplate(index) {
                 </section>
 
                 <footer class='dialog-footer'>
-                    <button class='nav-btn' onclick='prevImg(${index})'>◀</button>
+                    <button class='nav-btn' onclick='prevImg(${index})'><img src="./img/Arrow-Left.png"></button>
                     <span class='counter' id='counter'>${index + 1}/${gallery.length}</span>
-                    <button class='nav-btn' onclick='nextImg(${index})'>▶</button>
+                    <button class='nav-btn' onclick='nextImg(${index})'><img src="./img/Arrow-Right.png"></button>
                 </footer>
             </div>`
 }
