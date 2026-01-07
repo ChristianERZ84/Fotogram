@@ -28,7 +28,14 @@ footer {
     height: 100px;
 }
 
-.content-header,
+.content-header {
+    height: 100%;
+    max-width: 1440px;
+    margin: auto;
+    /* border: 2px solid red; */
+    padding: 25px 0px 0px 25px;
+}
+
 .content-footer {
     height: 100%;
     max-width: 1440px;
