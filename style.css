@@ -21,11 +21,17 @@ body {
     padding: 0;
 }
 
-header,
-footer {
+header {
     background-color: rgb(20 17 22);
     width: 100%;
     height: 100px;
+}
+
+
+footer {
+    background-color: rgb(20 17 22);
+    width: 100%;
+    height: 124px;
 }
 
 .content-header {
@@ -41,7 +47,11 @@ footer {
     max-width: 1440px;
     margin: auto;
     /* border: 2px solid red; */
-    padding: 25px 0px 0px 25px;
+    /* padding: 25px 0px 0px 25px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo-header {
@@ -57,7 +67,7 @@ footer {
 main {
     max-width: 1440px;
     width: 100%;
-    min-height: calc(100dvh - 200px);
+    min-height: calc(100dvh - 224px);
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -127,7 +137,7 @@ dialog {
     width: 66%;
     border: 1px solid grey;
     color: whitesmoke;
-    background-color: rgb(33, 33, 35);
+    background-color: rgb(13, 13, 13);
     border-radius: 16px;
 }
 
@@ -142,13 +152,22 @@ h2 {
     font-size: 24px;
 }
 
-.dialog-header,
-.dialog-footer {
-    background-color: transparent;
+.dialog-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 50px;
+    gap: 60px;
+    height: 84px;
+    background-color: transparent;
+}
+
+.dialog-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    height: 84px;
+    background-color: transparent;
     /* border: 2px solid white; */
 }
 
@@ -172,32 +191,41 @@ h2 {
 .close-btn {
     display: flex;
     justify-content: center;
-    align-items: end;
-    width: 28px;
-    height: 28px;
+    align-items: center;
+    width: 32px;
+    height: 32px;
     font-size: 20px;
-    border-radius: 6px;
+    border-radius: 50%;
     border: none;
-    color: rgb(39, 36, 36);
+    background-color: transparent;
 }
 
 .close-btn:hover {
     cursor: pointer;
+    background-color: rgba(18, 70, 88, 1);
+}
+
+.close-btn:active {
+    background-color: rgba(13, 50, 64, 1);
 }
 
 .nav-btn {
-    border-radius: 8px;
+    border-radius: 50%;
     font-size: 20px;
     text-align: center;
     padding: 0px;
-    width: 40px;
-    height: auto;
+    width: 60px;
+    height: 60px;
     border: none;
-    color: rgb(39, 36, 36);
+    background-color: rgba(40, 33, 35, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-btn:hover {
     cursor: pointer;
+    background-color: rgba(58, 36, 40, 1);
 }
 
 .counter {
