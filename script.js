@@ -53,9 +53,9 @@ function renderDialogTemplate(index) {
                 </section>
 
                 <footer class='dialog-footer'>
-                    <button class='nav-btn' onclick='prevImg(${index})'><img src="./img/Arrow-Left.png"></button>
-                    <span class='counter' id='counter'>${index + 1}/${gallery.length}</span>
-                    <button class='nav-btn' onclick='nextImg(${index})'><img src="./img/Arrow-Right.png"></button>
+                    <div class='box-df-btn-left'><button class='nav-btn' onclick='prevImg(${index})'><img src="./img/Arrow-Left.png"></button></div>
+                    <div class='box-df-counter'><span class='counter' id='counter'>${index + 1}/${gallery.length}</span></div>
+                    <div class='box-df-btn-right'><button class='nav-btn' onclick='nextImg(${index})'><img src="./img/Arrow-Right.png"></button></div>
                 </footer>
             </div>`
 }
