@@ -36,7 +36,7 @@ function renderGallery() {
 }
 
 function getImgTemplate(index) {
-    return `<button class="single-gallery-img-btn" onclick='openDialog(), renderDialog(${index})'>
+    return `<button class='single-gallery-img-btn' onclick='openDialog(), renderDialog(${index})' aria-haspopup='dialog' aria-controls='myDialog'>
                <img src="./img/${gallery[index]}" alt="${titles[index]}">
             </button>`
 }
@@ -45,7 +45,7 @@ function renderDialogTemplate(index) {
     return `<div class='dialog-content-wrapper' onclick='event.stopPropagation()'>
                 <header class='dialog-header'>
                     <h2 id="dialogTitle">${titles[index]}</h2>
-                    <button class='close-btn' onclick="closeDialog()" aria-label="close dialog"><img src="./img/close.png"></button>
+                    <button class='close-btn' onclick='closeDialog()' aria-label="close dialog"><img src="./img/close.png"></button>
                 </header>
 
                 <section class='dialog-big-img-container' id='dialog-single-img'>
