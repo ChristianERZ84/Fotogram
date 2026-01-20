@@ -36,26 +36,32 @@ function renderGallery() {
 }
 
 function getImgTemplate(index) {
-    return `<button class="single-gallery-img-btn" onclick='openDialog(), renderDialog(${index})' role="button" tabindex='0'>
+    return `<button class="single-gallery-img-btn" onclick='openDialog(), renderDialog(${index})'>
                <img src="./img/${gallery[index]}" alt="${titles[index]}">
             </button>`
 }
 
 function renderDialogTemplate(index) {
-    return `<div class='dialog-main-container' onclick='event.stopPropagation()'>
+    return `<div class='dialog-content-wrapper' onclick='event.stopPropagation()'>
                 <header class='dialog-header'>
                     <h2 id="dialogTitle">${titles[index]}</h2>
                     <button class='close-btn' onclick="closeDialog()" aria-label="close dialog"><img src="./img/close.png"></button>
                 </header>
 
-                <section class='dialog-big-img' id='dialog-single-img'>
-                    <img src="./img/${gallery[index]}" alt="${titles[index]}">    
+                <section class='dialog-big-img-container' id='dialog-single-img'>
+                    <img class='dialog-big-img' src="./img/${gallery[index]}" alt="${titles[index]}">    
                 </section>
 
                 <footer class='dialog-footer'>
-                    <div class='box-df-btn-left'><button class='nav-btn' onclick='prevImg(${index})'><img src="./img/Arrow-Left.png"></button></div>
-                    <div class='box-df-counter'><span class='counter' id='counter'>${index + 1}/${gallery.length}</span></div>
-                    <div class='box-df-btn-right'><button class='nav-btn' onclick='nextImg(${index})'><img src="./img/Arrow-Right.png"></button></div>
+                    <div class='box-df-btn-left'>
+                        <button class='nav-btn' onclick='prevImg(${index})'><img src="./img/Arrow-Left.png"></button>
+                    </div>
+                    <div class='box-df-counter'>
+                        <span class='counter' id='counter'>${index + 1}/${gallery.length}</span>
+                    </div>
+                    <div class='box-df-btn-right'>
+                        <button class='nav-btn' onclick='nextImg(${index})'><img src="./img/Arrow-Right.png"></button>
+                    </div>
                 </footer>
             </div>`
 }

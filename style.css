@@ -27,11 +27,10 @@ header {
     height: 100px;
 }
 
-
 footer {
     background-color: rgb(20 17 22);
     width: 100%;
-    height: 124px;
+    height: 100px;
 }
 
 .content-header {
@@ -42,32 +41,34 @@ footer {
     padding: 25px 0px 0px 25px;
 }
 
-.content-footer {
-    height: 100%;
-    max-width: 1440px;
-    margin: auto;
-    /* border: 2px solid red; */
-    /* padding: 25px 0px 0px 25px; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .logo-header {
     height: 50px;
     width: auto;
 }
 
+.content-footer {
+    height: 100%;
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+footer p {
+    margin: 0;
+}
+
 .logo-footer {
-    height: 50px;
-    width: auto;
+    height: 38px;
 }
 
 main {
     max-width: 1440px;
     width: 100%;
-    min-height: calc(100dvh - 224px);
+    min-height: calc(100dvh - 200px);
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -116,25 +117,26 @@ h1 {
 
 
 /*  Noch anpassen ---> 1x für pics der Galerie & 1x für einzelnes pic im Dialog  */
-/* section img {
+.dialog-big-img {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
-} */
+    height: inherit;
+    object-fit: cover;
+    aspect-ratio: 1;
+}
 
-section img {
+/* body main section img {
     aspect-ratio: 16 / 9;
     width: 100%;
     height: inherit;
     object-fit: cover;
-}
+} */
 
 /* - - - - - - dialog - - - - - - */
 
 dialog {
-    min-width: 300px;
-    max-width: 1024px;
-    width: 66%;
+    height: 90dvh;
+    min-width: 46vw;
+    padding: 0 16px;
     border: 1px solid grey;
     color: whitesmoke;
     background-color: rgb(13, 13, 13);
@@ -157,6 +159,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     height: 84px;
+    margin: 8px 8px 0 8px;
     background-color: transparent;
 }
 
@@ -165,8 +168,8 @@ h2 {
     justify-content: center;
     align-items: center;
     height: 84px;
+    margin: 0 8px 22px 8px;
     background-color: transparent;
-    /* border: 2px solid white; */
 }
 
 .box-df-btn-left {
@@ -190,9 +193,7 @@ h2 {
     width: 33%;
 }
 
-
-.dialog-main-container {
-    /* border: 2px solid coral; */
+.dialog-content-wrapper {
     justify-content: space-between;
     flex-direction: column;
     width: 100%;
@@ -200,12 +201,13 @@ h2 {
     display: flex;
 }
 
-.dialog-big-img {
-    /* border: 2px solid coral; */
+.dialog-big-img-container {
+    overflow-y: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 85%;
+    height: 88%;
+    margin: 0 8px;
 }
 
 .close-btn {
@@ -253,11 +255,10 @@ h2 {
     font-size: 20px;
 }
 
-/* button:focus, [role="button"]:focus {
+button:focus, [role="button"]:focus {
   outline: 2px solid whitesmoke;
   box-shadow: 0 0 5px 6px whitesmoke;
-} */
-
+}
 
 
 @media (max-width: 680px) {
@@ -282,7 +283,6 @@ h2 {
 }
 
 
-
 @media (max-width: 400px) {
 
     h1 {
@@ -290,13 +290,9 @@ h2 {
     }
 }
 
+@media (max-width: 400px) {
 
-
-
- /* * {
-            text-decoration: none;
-            margin: 0;
-            padding: 0;
-            position: relative;
-            box-sizing: border-box;
-        } */
+    dialog {
+        height: 75dvh;
+    }
+}
