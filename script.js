@@ -75,7 +75,6 @@ function nextImg(index) {
     if (index == gallery.length) {
         index = 0;
     }
-    // dialogRef.innerHTML = renderDialogTemplate(index);
     renderDialog(index);
 }
 
@@ -84,7 +83,6 @@ function prevImg(index) {
     if (index < 0) {
         index = gallery.length - 1;
     }
-    // dialogRef.innerHTML = renderDialogTemplate(index);
     renderDialog(index);
 }
 
